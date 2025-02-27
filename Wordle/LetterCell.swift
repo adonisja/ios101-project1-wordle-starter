@@ -51,6 +51,27 @@ class LetterCell: UICollectionViewCell {
   func set(style: LetterCellStyle) {
     // START YOUR CODE HERE
     // ...
+      switch style {
+      case .initial:
+        // Set the background color to black and the border color to gray for initial state
+        contentView.backgroundColor = .black
+        layer.borderColor = UIColor.gray.cgColor
+
+      case .incorrect:
+        // Set the background and border color to RGBA (0.23, 0.23, 0.24, 1.0) for incorrect guesses
+        contentView.backgroundColor = UIColor(red: 0.23, green: 0.23, blue: 0.24, alpha: 1.0)
+        layer.borderColor = UIColor(red: 0.23, green: 0.23, blue: 0.24, alpha: 1.0).cgColor
+
+      case .correctLetterOnly:
+        // Set the background and border color to RGBA (0.69, 0.63, 0.30, 1.0) for correct letters only
+        contentView.backgroundColor = UIColor(red: 0.69, green: 0.63, blue: 0.30, alpha: 1.0)
+        layer.borderColor = UIColor(red: 0.69, green: 0.63, blue: 0.30, alpha: 1.0).cgColor
+
+      case .correctLetterAndPosition:
+        // Set the background and border color to RGBA (0.38, 0.55, 0.33, 1.0) for correct letter and position
+        contentView.backgroundColor = UIColor(red: 0.38, green: 0.55, blue: 0.33, alpha: 1.0)
+        layer.borderColor = UIColor(red: 0.38, green: 0.55, blue: 0.33, alpha: 1.0).cgColor
+          }
     // END YOUR CODE HERE
   }
 }
